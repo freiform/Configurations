@@ -20,9 +20,9 @@ guide you through the configuration and compilation.
 9. Download the latest Marlin source (from the [bugfix-2.0.x](https://github.com/MarlinFirmware/Marlin/tree/bugfix-2.0.x) branch) and unzip it.
 10. Look in the `Marlin` subdirectory for the `Configuration.h` and `Configuration_adv.h` files. Replace both of these files with the the files found here. 
 11. Edit the `Configuration.h` and `Configuration_adv.h` files for your machine.
-   * If you have an early-run V2, the steps-per-mm are roughly half. Consult the [mpminipro.com wiki](https://mpminipro.com/) for the steps that apply to your unit. Modify `Configuration.h`.
-   * Inverting Axis. There's no pattern to axes will need to be inverted. The only way to know is to test your particular printer. If you *do* know, go ahead and invert the correct axes under "Invert the stepper direction" in `Configuration.h`.
-   * If you you using either fan output in non-default setup, e.g. you have a hotend/extruder fan connected directly to the 12v rail and want to use the fan output as a part fan, then edit `Configuration_adv.h` to match your setup.
+   - If you have an early-run V2, the steps-per-mm are roughly half. Consult the [mpminipro.com wiki](https://mpminipro.com/) for the steps that apply to your unit. Modify `Configuration.h`.
+   - Inverting Axis. There's no pattern to axes will need to be inverted. The only way to know is to test your particular printer. If you *do* know, go ahead and invert the correct axes under "Invert the stepper direction" in `Configuration.h`.
+   - If you you using either fan output in non-default setup, e.g. you have a hotend/extruder fan connected directly to the 12v rail and want to use the fan output as a part fan, then edit `Configuration_adv.h` to match your setup.
 12. Open the `Marlin/Marlin.ino` file in Arduino IDE.
 13. From the **Sketch** menu, select **File** > **Export Compiled Binary**.
 14. When compilation is done you've built the firmware. The next stage is to flash it to the board. To do this look for a line like this: `"path/to/bin/arm-none-eabi-objcopy" -O binary "/path/to/Marlin.ino.elf" "/path/to/Marlin.ino.bin"`
